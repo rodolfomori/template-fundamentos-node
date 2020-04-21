@@ -25,14 +25,14 @@ class TransactionsRepository {
 
   public getBalance(): Balance {
     const income: number = this.transactions.reduce(
-      (acumulator, current) =>
-        current.type === 'income' ? acumulator + current.value : acumulator,
+      (accumulator, current) =>
+        current.type === 'income' ? accumulator + current.value : accumulator,
       0,
     );
 
     const outcome: number = this.transactions.reduce(
-      (acumulator, current) =>
-        current.type === 'outcome' ? acumulator + current.value : acumulator,
+      (accumulator, current) =>
+        current.type === 'outcome' ? accumulator + current.value : accumulator,
       0,
     );
 
